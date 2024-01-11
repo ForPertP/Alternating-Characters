@@ -12,7 +12,25 @@ string rtrim(const string &);
  * The function accepts STRING s as parameter.
  */
 
-int alternatingCharacters(string s) {
+int alternatingCharacters(string s)
+{
+    int result = 0;
+    char lastChar = '\0';
+
+    for (char currentChar : s)
+    {
+        if (currentChar == lastChar)
+        {
+            ++result;
+        }
+        
+        lastChar = currentChar;
+    }
+
+    return result;
+}
+
+int alternatingCharacters2(string s) {
     int result = 0;
 
     for (size_t i = 0; i < s.size()-1; ++i)
