@@ -24,6 +24,20 @@ class Result
 
     public static int alternatingCharacters(string s)
     {
+        int result = 0;
+        char lastChar = '\0';
+
+        foreach (char currentChar in s)
+        {
+            if (currentChar == lastChar)
+            {
+                ++result;
+            }
+
+            lastChar = currentChar;
+        }
+
+        return result;
     }
 }
 
