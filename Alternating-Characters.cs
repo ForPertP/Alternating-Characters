@@ -39,6 +39,22 @@ class Result
 
         return result;
     }
+
+    public static int alternatingCharacters2(string s)
+    {
+        int result = 0;
+
+        for (int i = 0; i < s.Length - 1; ++i)
+        {
+            if (s[i] == s[i + 1])
+            {
+                result++;
+            }
+        }
+
+        return result;
+    }
+
 }
 
 class Solution
