@@ -18,6 +18,20 @@ class Result {
      * The function is expected to return an INTEGER.
      * The function accepts STRING s as parameter.
      */
+    public static int alternatingCharacters(String s) { 
+        int result = 0;
+        char lastChar = '\0';
+
+        for (char currentChar : s.toCharArray()) {
+            if (currentChar == lastChar) {
+                ++result;
+            }
+
+            lastChar = currentChar;
+        }
+
+        return result;     
+    }
 
     public static int alternatingCharacters2(String s) {
         int result = 0;
